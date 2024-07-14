@@ -14,7 +14,7 @@ const JobDetails = () => {
     const fetchJobDetails = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/v1/job/${id}`,
+          `https://skillsafari-job-portal.onrender.com/api/v1/job/${id}`,
           {
             withCredentials: true,
           }

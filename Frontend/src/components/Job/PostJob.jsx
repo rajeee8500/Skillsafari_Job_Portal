@@ -57,12 +57,16 @@ const PostJob = () => {
           };
 
     await axios
-      .post("http://localhost:5000/api/v1/job/post", jobData, {
-        withCredentials: true,
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
+      .post(
+        "https://skillsafari-job-portal.onrender.com/api/v1/job/post",
+        jobData,
+        {
+          withCredentials: true,
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
       .then((res) => {
         toast.success(res.data.message);
       })
