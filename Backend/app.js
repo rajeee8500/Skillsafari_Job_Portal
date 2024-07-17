@@ -19,7 +19,12 @@ config({ path: "./.env" });
 //     credentials: true,
 //   })
 // );
-app.use(cors());
+const corsOptions = {
+  origin: "https://skill-safari.netlify.app",
+  credentials: true, // Allow credentials
+};
+
+app.use(cors(corsOptions));
 
 app.use(cookieParser());
 app.use(express.json());
